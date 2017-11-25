@@ -1,8 +1,7 @@
 #!/system/bin/sh
 
 echo ---------------------------------------
-echo ---------- Made By : Mr.W0lf ----------
-echo ---- Thanks @Chainfire for SuperSU ----
+echo ----- Thanks topjohnwu for Magisk -----
 echo ---------------------------------------
 
 mount -o rw,remount /system
@@ -65,7 +64,7 @@ busybox chattr -ia /system/bin/install-recovery.sh
 rm /system/bin/install-recovery.sh
 busybox chattr -ia /system/bin/install-recovery.sh-ku.bak
 rm /system/bin/install-recovery.sh-ku.bak
-pm uninstall eu.chainfire.supersu >/dev/null  2>&1
+pm uninstall com.topjohnwu.magisk >/dev/null  2>&1
 pm install /sdcard/mrw/superuser.apk
 busybox chattr -ia /system/usr/iku/isu
 rm -r /system/usr/iku
@@ -77,5 +76,5 @@ rm -r /system/app/Kinguser
 rm -r /data/data-lib/king
 rm -r /sdcard/Kingroot
 rm /sdcard/kr-stock-conf >/dev/null 2>&1
-am start -a android.intent.action.MAIN -n eu.chainfire.supersu/.MainActivity >/dev/null
+am start -a android.intent.action.MAIN -n com.topjohnwu.magisk/.MainActivity >/dev/null
 sleep 2
